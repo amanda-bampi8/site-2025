@@ -19,35 +19,25 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            
+                    <?php if ($_SESSION['nivel'] !='3') { ?>
                     <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="header" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa fa-plus" style="font-size:24px"></i>&ensp;Adicionar
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#"><i class="fa fa-address-book-o" style="font-size:24px"></i>&ensp;Cliente</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fa fa-tags" style="font-size:24px"></i>&ensp;Plano</a></li>
+                        <li><a class="dropdown-item" href="form-plano.php"><i class="fa fa-tags" style="font-size:24px"></i>&ensp;Plano</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#"><i class="fa fa-calendar" style="font-size:24px"></i>&ensp;Atendimento</a></li>
                     </li>
+                    <?php } ?>
                     </ul>
                     <li class="nav-item">
                     <a class="nav-link" id="header" href="fatura.php"><i class="fa fa-drivers-license" style="font-size:24px"></i>&ensp;Faturas</a>
                     </li>
-                    <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="header" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa fa-navicon" style="font-size:24px"></i>&ensp;Listar
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#"><i class="fa fa-address-book-o" style="font-size:24px"></i>&ensp;Clientes</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fa fa-tags" style="font-size:24px"></i>&ensp;Planos</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#"><i class="fa fa-calendar" style="font-size:24px"></i>&ensp;Atendimentos</a></li>
-                    </ul>
-                    </li>   
                 </ul>
                 <a href="logout.php">
-                <button type="button" class="btn btn-secondary btn-lg"><i class="fa fa-mail-reply"></i>&ensp;Sair</button>
-                </a>
+               <button class="btn btn-outline-light rounded-100"><strong><i class="fa fa-reply"></i>  Sair </strong></button>
+            </a>
             </div>
         </nav>
