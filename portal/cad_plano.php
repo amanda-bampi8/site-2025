@@ -13,7 +13,7 @@
             </script>";
     } else if (!empty($_POST['nomeplano']) OR !empty($_POST['descplano']) OR !empty($_POST['vltplano'])) {
 
-
+    $nomeplano = $_POST['nomeplano'];
 
     } else {
     echo "<script> 
