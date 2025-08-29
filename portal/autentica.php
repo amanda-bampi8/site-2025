@@ -17,9 +17,9 @@
             $result = $conexao->query($query);
 
             while($dado = $result->fetch_array()) {
-                $id_operadores        = $dado['id_operadores'];
-                $nome_operadores      = $dado['nome_operadores'];
-                $sobrenome_operadores = $dado['sobrenome_operadores'];
+                $id_operador        = $dado['id_operador'];
+                $nome_operador      = $dado['nome_operador'];
+                $sobrenome_operador = $dado['sobrenome_operador'];
                 $nivel              = $dado['nivel'];
             }
 
@@ -29,9 +29,9 @@
 
                 if ($row == 1) {
                     $dado = $result->fetch_assoc(); // Use fetch_assoc() para array associativo
-                    $_SESSION['id_operadores']        = $id_operadores;
-                    $_SESSION['nome_operadores']      = $nome_operadores;
-                    $_SESSION['sobrenome_operadores'] = $sobrenome_operadores;
+                    $_SESSION['id_operador']        = $id_operador;
+                    $_SESSION['nome_operador']      = $nome_operador;
+                    $_SESSION['sobrenome_operador'] = $sobrenome_operador;
                     $_SESSION['email']              = $email;
                     $_SESSION['nivel']              = $nivel;
 
