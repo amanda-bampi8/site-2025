@@ -14,6 +14,10 @@
     } else if (!empty($_POST['nomeplano']) OR !empty($_POST['descplano']) OR !empty($_POST['vltplano'])) {
 
     $nomeplano = $_POST['nomeplano'];
+    $descplano = $_POST['descplano'];
+    $vltplano = $_POST['vltplano'];
+
+
 
     } else {
     echo "<script> 
