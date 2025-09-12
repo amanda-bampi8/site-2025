@@ -11,13 +11,21 @@
             alert('Você não tem acesso a essa área!')
             history.go(-1);
             </script>";
-    } else if (!empty($_POST['nomeplano']) OR !empty($_POST['descplano']) OR !empty($_POST['vltplano'])) {
+    } else if (!empty($_POST['nome_plano']) OR !empty($_POST['desc_plano']) OR !empty($_POST['vlr_plano'])) {
 
-    $nomeplano = $_POST['nomeplano'];
-    $descplano = $_POST['descplano'];
-    $vltplano = $_POST['vltplano'];
+    $nome_plano = $_POST['nome_plano'];
+    $desc_plano = $_POST['desc_plano'];
+    $vlr_plano = $_POST['vlr_plano'];
 
+    $sql_code = "INSERT INTO planos (nome_plano, desc_plano, vlr_plano, dt_cad_plano) VALUES ('$nome_plano' , '$desc_plano' , '$vlr_plano' , NOW())";
+    if ($conexao->query($sql_code)or die($conexao->error)) {
+        $_SESSION['msgFormPlano'] = "OK, plano inserido com sucesso";
+        header("location: form_plano.php");
+    } else {
+            $_SESSION['msgFormPlano'] = "ERRO, plano inserido com sucesso";
+            header("location: form_plano.php");
 
+    }
 
     } else {
     echo "<script> 

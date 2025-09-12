@@ -9,7 +9,7 @@
                 </form>
                 </div>
             </div>
-            </nav>
+        </nav>
             
             <nav class="navbar navbar-expand-lg bg-primary">
             <div class="container-fluid">
@@ -26,7 +26,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#"><i class="fa fa-address-book-o" style="font-size:24px"></i>&ensp;Cliente</a></li>
-                        <li><a class="dropdown-item" href="form-plano.php"><i class="fa fa-tags" style="font-size:24px"></i>&ensp;Plano</a></li>
+                        <li><a class="dropdown-item" href="form_plano.php"><i class="fa fa-tags" style="font-size:24px"></i>&ensp;Plano</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#"><i class="fa fa-calendar" style="font-size:24px"></i>&ensp;Atendimento</a></li>
                     </li>
@@ -36,8 +36,8 @@
                     <a class="nav-link" id="header" href="fatura.php"><i class="fa fa-drivers-license" style="font-size:24px"></i>&ensp;Faturas</a>
                     </li>
                 </ul>
-                <a href="logout.php">
-               <button class="btn btn-outline-light rounded-100"><strong><i class="fa fa-reply"></i>  Sair </strong></button>
+            <a href="logout.php">
+                <button class="btn btn-outline-light rounded-100"><strong><i class="fa fa-reply"></i>  Sair </strong></button>
             </a>
             </div>
         </nav>

@@ -33,20 +33,25 @@
             <center><h5> PREENCHA OS CAMPOS ABAIXO PARA ADICIONAR UM NOVO PLANO </h5></center>
 
             <hr>
-
+                <?php
+                if (isset($_SESSION['MsgformPlano'])) {
+                    echo $_SESSION['MsgformPlano'];
+                    unset($_SESSION['MsgformPlano']);
+                }
+                ?>
             <form>
                 <div class="form-row">
                     <div class="col">
                         <label for="nomePlano">* Nome</label>
-                        <input type="text" class="form-control" id= "nomeplano" name="nomeplano"placeholder="Nome do plano">
+                        <input type="text" class="form-control" id= "nome_plano" name="nome_plano"placeholder="Nome do plano">
                     </div>
                     <div class="col">
                         <label for="descricaoPlano">* Descrição</label>
-                        <input type="text" class="form-control" id= "descplano" name="descplano" placeholder="Descreva detalhes do plano">
+                        <input type="text" class="form-control" id= "desc_plano" name="desc_plano" placeholder="Descreva detalhes do plano">
                     </div>
                     <div class="col">
                         <label for="valorPlano">* Valor</label>
-                        <input type="text" class="form-control"  id= "vlrplano" name="vlrplano" placeholder="R$ 0,00">
+                        <input type="text" class="form-control"  id= "vlr_plano" name="vlr_plano" placeholder="R$ 0,00">
                         <button type="submit" class="btn btn-primary">Enviar</button>
                         <button type="reset" class="btn btn-danger">Limpar</button> 
                     </div>
