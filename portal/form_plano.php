@@ -34,12 +34,12 @@
 
             <hr>
                 <?php
-                if (isset($_SESSION['MsgformPlano'])) {
-                    echo $_SESSION['MsgformPlano'];
-                    unset($_SESSION['MsgformPlano']);
+                if (isset($_SESSION['msgFormPlano'])) {
+                    echo  $_SESSION['msgFormPlano'];
+                    unset($_SESSION['msgFormPlano']);
                 }
                 ?>
-            <form>
+            <form action="cad_plano.php" method="POST">
                 <div class="form-row">
                     <div class="col">
                         <label for="nomePlano">* Nome</label>
