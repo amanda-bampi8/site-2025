@@ -6,31 +6,27 @@ $niveldapagina = array($mestre, $colaborador);
 $id_plano      = filter_input(INPUT_GET, 'id_plano', FILTER_SANITIZE_NUMBER_INT);
 
 if (!in_array($nivel, $niveldapagina)) {
-    echo "
-        <script>
+    echo 
+        "<script>
             alert('você nao tem permissao para acessar essa area!');
             history.go(-1);
-        </script>
-    ";
+        </script>";
 
 } else if (!empty($id_plano)) {
         $consulta = "SELECT * FROM planos
                     WHERE id_plano = '$id_plano'";
 
         $con     = $conexao->query($consulta) or die ($conexao->error);
-        while($dado = $con->fetch_array()){
+        while($dado = $con->fetch_array()) {
                 $nome_plano  = $dado['nome_plano'];   
                 $desc_plano = $dado['desc_plano'];   
                 $vlr_plano = $dado['vlr_plano'];        
+        }
 
-} 
 } else {
-
-
+    header("Location: lista_plano.php");
+    exit;
 }
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -64,7 +60,7 @@ if (!in_array($nivel, $niveldapagina)) {
             }
             ?>
 
-            <form action= "save_plano.php" method="POST">
+            <form action= "save_plano.php?id_plano=<?php echo $id_plano;?>" method="POST">
                 <div class="form-row">
                     <div class="col">
                         <label for="nomePlano">* Nome</label>
@@ -77,10 +73,9 @@ if (!in_array($nivel, $niveldapagina)) {
                     <div class="col">
                         <label for="valorPlano">* Valor</label>
                         <input type="text" class="form-control" id="vlr_plano" name="vlr_plano" value="<?php echo $vlr_plano; ?>">
-                        <button type="reset" class="btn btn-danger">ENVIAR</button> 
-                    </div>
-                        
+                    </div>       
                 </div>
+                <button type="submit" class="btn btn-danger">ENVIAR</button> 
             </form>
             <br>
             

@@ -21,7 +21,7 @@ $id_plano      = filter_input(INPUT_GET, 'id_plano', FILTER_SANITIZE_NUMBER_INT)
     $consultaplano = "SELECT * FROM planos
         WHERE id_plano = '$id_plano'";
 
-    $sql_code = "UPDATE planos SET nome_plano='$nome_plano', desc_plano='$desc_plano', vlr_plano='$vlr_plano' WHERE id_plano = '$id_plano'";
+    $sql_code = "UPDATE planos SET nome_plano='$nome_plano', desc_plano='$desc_plano', vlr_plano='$vlr_plano' WHERE id_plano='$id_plano'";
     if ($conexao->query($sql_code)or die($conexao->error)) {
         $_SESSION['msgListaPlano'] = "<center> <div class='alert alert-success' role='alert'> OK, plano inserido com sucesso </div> </center>";
         header("Location: lista_plano.php");
